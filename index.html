@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Control Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Ball Control Game</h1>
+            <div class="game-stats">
+                <span>Level: <span id="level">1</span></span>
+                <span>Score: <span id="score">0</span></span>
+                <span>Time: <span id="time">60</span>s</span>
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard">
+            <div class="ball" id="ball"></div>
+            <div class="target" id="target"></div>
+            <!-- Obstacles will be added dynamically -->
+        </div>
+        <div class="game-controls">
+            <button id="startBtn">Start Game</button>
+            <button id="resetBtn">Reset Game</button>
+            <div class="sound-controls">
+                <button id="soundBtn">🔊 Sound On</button>
+            </div>
+            <div class="instructions">
+                <p>Use arrow keys or swipe to move the ball. Reach the target to score!</p>
+            </div>
+        </div>
+        <div class="game-message" id="gameMessage"></div>
+        
+        <!-- Audio elements -->
+        <audio id="targetSound" src="../../Music/Benson Boone - Ghost Town (Piano Karaoke).mp3" preload="auto"></audio>
+        <audio id="obstacleSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-explosion-2759.mp3" preload="auto"></audio>
+        <audio id="gameOverSound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-lose-2027.mp3" preload="auto"></audio>
+        <audio id="backgroundMusic" loop src="https://assets.mixkit.co/music/preview/mixkit-game-show-suspense-waiting-668.mp3" preload="auto"></audio>
+        <audio id="moveSound" src="https://assets.mixkit.co/sfx/preview/mixkit-plastic-knock-1124.mp3" preload="auto"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
